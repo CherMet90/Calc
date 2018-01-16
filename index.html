@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+</head>
+<body>
+	<header>
+		<div class="header__wrap">
+			<h1>Расчёт стоимости</h1>
+			<p>Чтобы подобрать подходящий тарифный план воспользуйтесь простым калькулятором стоимости или выберите тарифный план из списка.</p>
+		</div>
+	</header>
+	<img class="top-img" src="img/header_border-bottom.jpg" alt="">
+	<section>
+		<div class="titles">
+			<div class="titles__calc titles--items">
+				Калькулятор
+			</div>
+			<div class="titles__tariffs titles--items">
+				Тарифные планы
+			</div>
+		</div>
+		<div class="content">
+			<div class="content-calc content--items">
+				<div class="sliders-column">
+					<div class="computers-number sliders-column--items">
+						<span>Количество компьютеров</span>
+						<input type="text" id="comp_num" value="5" oninput="comp_sl.value = comp_num.value;">
+						<input type="range" id="comp_sl" min="0" max="9" value="5" step="1" oninput="comp_num.value = comp_sl.value;">
+					</div>
+					<div class="operation-mode sliders-column--items">
+						<span>Режим работы специалиста</span>
+						<div class="operation-mode__selectors">
+							<label class="selectors__wrap">
+								<div class="selectors--title">
+									9:00-18:00
+								</div>
+								<input type="radio" name="oper_mode" id="r1" value="1800">
+								<span></span>
+							</label>
+							<label class="selectors__wrap">
+								<div class="selectors--title">
+									9:00-20:00
+								</div>
+								<input type="radio" name="oper_mode" id="r2" value="2000">
+								<span></span>
+							</label>
+							<label class="selectors__wrap">
+								<div class="selectors--title">
+									Круглосуточно
+								</div>
+								<input type="radio" name="oper_mode" id="r3" value="allover">
+								<span></span>
+							</label>
+						</div>
+					</div>
+					<div class="servers-number sliders-column--items">
+						<span>Количество серверов</span>
+						<input type="text" id="serv_num" value="5" oninput="serv_sl.value = serv_num.value;">
+						<input type="range" id="serv_sl" min="0" max="9" value="5" step="1" oninput="serv_num.value = serv_sl.value;">
+					</div>
+				</div>
+				<div class="img-column">
+					<div class="img-column--items"><img src="img/comp_img.png" alt=""></div>
+					<div class="img-column--items"><img src="img/time_img.png" alt=""></div>
+					<div class="img-column--items"><img src="img/servs_img.png" alt=""></div>
+				</div>
+			</div>
+			<div class="content-tariffs content--items">
+				<h2>Вам подходят тарифные планы</h2>
+				<div class="content-tariffs--wrap">
+					<span>Базовый</span>
+					<span>Стандарт</span>
+					<span>Премиум</span>
+					<span>VIP</span>
+				</div>
+				<span class="tariffs__cost--title">Стоимоcть тарифа</span>
+				<span class="tariffs__cost">2990 руб.</span>
+				<table>
+					<tr><td>Плановые выезды</td><td>1</td></tr>
+					<tr><td>Экстренные выезды</td><td>3</td></tr>
+					<tr><td>Время реакции</td><td>8 часов</td></tr>
+					<tr><td>Время решения проблемы</td><td>16 часов</td></tr>
+					<tr><td>Рабочее время</td><td>9:00-18:00</td></tr>
+					<tr><td>Коэффициент удаленности</td><td>1-1,2</td></tr>
+					<tr><td>Количество техники</td><td>> 15 шт.*</td></tr>
+					<tr><td>Обслуживание сервера</td><td>1 300 руб</td></tr>
+					<tr><td>Проектный мониторинг</td><td>-</td></tr>
+					<tr><td>Закрепленный инженер</td><td>-</td></tr>
+				</table>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer__items">
+				* Каждый следующий сервер - 490 рублей.<br>
+				Стоимость обслуживания 1 компьютера + 490 руб.
+			</div>
+			<div class="footer__items">
+				<h2>Предварительная стоимость:</h2>
+				<h3>с учётом количества компьютеров</h3>
+				<span id="sum"></span><span>&#160;рублей</span><br>
+				<!-- <input type="text" id="num"><br> -->
+				<input type="button" value="ЗАКАЗАТЬ" onclick="" name="btn">
+			</div>
+		</div>
+	</section>
+	<script src="libs/jquery-3.2.1.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
